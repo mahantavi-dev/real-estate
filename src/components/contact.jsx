@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import { toast } from "react-toastify";
 
 const Contact = () => {
@@ -26,7 +26,7 @@ const Contact = () => {
       } else {
         toast.error(data.message || "Something went wrong!");
       }
-    } catch (error) {
+    } catch {
       toast.error("Network error. Please try again.");
     }
 
@@ -34,13 +34,13 @@ const Contact = () => {
   };
 
   return (
-    <motion.section
+    <Motion.section
       id="contact"
       initial={{ opacity: 0, x: 120 }}   // 👈 Animate from RIGHT
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
-      className="text-center py-20 px-6 lg:px-32 w-full"
+      className="scroll-mt-24 text-center py-20 px-6 lg:px-32 w-full"
     >
       {/* Heading */}
       <h1 className="text-3xl sm:text-4xl font-bold mb-3">
@@ -104,7 +104,7 @@ const Contact = () => {
           {loading ? "Sending..." : "Send Message"}
         </button>
       </form>
-    </motion.section>
+    </Motion.section>
   );
 };
 

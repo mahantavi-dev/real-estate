@@ -22,11 +22,15 @@ const Navbar = () => {
           <a href="#about" className="cursor-pointer hover:text-gray-400">About</a>
           <a href="#projects" className="cursor-pointer hover:text-gray-400">Projects</a>
           <a href="#testimonials" className="cursor-pointer hover:text-gray-400">Testimonials</a>
+          <a href="#contact" className="cursor-pointer hover:text-gray-400">Contact</a>
         </ul>
 
-        <button className="hidden md:block bg-white px-8 py-2 rounded-full">
-          Sign Up
-        </button>
+        <a
+          href="#contact"
+          className="hidden md:block bg-white px-8 py-2 rounded-full"
+        >
+          Contact Us
+        </a>
 
         {/* Mobile Menu Icon */}
         <img
@@ -64,6 +68,9 @@ const Navbar = () => {
           </a>
           <a onClick={() => setShowMobileMenu(false)} href="#testimonials" className="px-4 py-2 rounded-full inline-block">
             Testimonials
+          </a>
+          <a onClick={() => setShowMobileMenu(false)} href="#contact" className="px-4 py-2 rounded-full inline-block">
+            Contact
           </a>
         </ul>
       </div>
