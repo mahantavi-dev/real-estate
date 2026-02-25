@@ -1,4 +1,4 @@
-import About from './Components/About'
+import About from './components/About'
 import Header from './Components/Header'
 import Projects from './Components/Projects'
 import Testimonials from './Components/Testimonials'
