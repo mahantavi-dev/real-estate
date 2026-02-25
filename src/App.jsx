@@ -1,9 +1,9 @@
-import About from './components/About'
-import Header from './components/Header'
-import Projects from './components/Projects'
-import Testimonials from './components/Testimonials'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+import About from './Components/About'
+import Header from './Components/Header'
+import Projects from './Components/Projects'
+import Testimonials from './Components/Testimonials'
+import Contact from './Components/Contact'
+import Footer from './Components/Footer'
 import { ToastContainer } from 'react-toastify'
 import "react-toastify/dist/ReactToastify.css"
 
