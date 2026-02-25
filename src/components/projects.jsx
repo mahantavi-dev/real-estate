@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { assets, projectsData } from "../assets/assets";
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 
 const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -38,13 +38,13 @@ const Projects = () => {
   };
 
   return (
-    <motion.section
+    <Motion.section
       id="projects"
       initial={{ opacity: 0, x: 120 }}   // 👈 from right
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
-      className="container mx-auto px-6 md:px-20 lg:px-32 py-16 my-20"
+      className="scroll-mt-24 container mx-auto px-6 md:px-20 lg:px-32 py-16 my-20"
     >
       {/* Heading */}
       <div className="text-center mb-10">
@@ -114,7 +114,7 @@ const Projects = () => {
           ))}
         </div>
       </div>
-    </motion.section>
+    </Motion.section>
   );
 };
 

@@ -1,16 +1,16 @@
 import React from "react";
 import { testimonialsData, assets } from "../assets/assets";
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 
 const Testimonials = () => {
   return (
-    <motion.section
+    <Motion.section
       id="testimonials"
       initial={{ opacity: 0, x: -120 }}   // 👈 Start from LEFT
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
-      className="container mx-auto py-16 px-4 lg:px-32 w-full"
+      className="scroll-mt-24 container mx-auto py-16 px-4 lg:px-32 w-full"
     >
       {/* Heading */}
       <div className="text-center mb-12">
@@ -29,7 +29,7 @@ const Testimonials = () => {
       {/* Testimonials Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
         {testimonialsData.map((testimonial, index) => (
-          <motion.div
+          <Motion.div
             key={index}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -73,10 +73,10 @@ const Testimonials = () => {
             <p className="text-gray-600 text-sm leading-relaxed">
               {testimonial.text}
             </p>
-          </motion.div>
+          </Motion.div>
         ))}
       </div>
-    </motion.section>
+    </Motion.section>
   );
 };
 
